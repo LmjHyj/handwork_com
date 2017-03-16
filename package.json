@@ -1,0 +1,22 @@
+{
+  "name": "handwork_com",
+  "version": "1.0.0",
+  "description": "基于koa的手工网站",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LmjHyj/handwork_com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LmjHyj/handwork_com/issues"
+  },
+  "homepage": "https://github.com/LmjHyj/handwork_com#readme",
+  "dependencies": {
+    "koa": "^2.2.0"
+  }
+}
