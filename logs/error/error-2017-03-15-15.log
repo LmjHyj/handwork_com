@@ -1,0 +1,66 @@
+[2017-03-15 15:22:07.363] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /channel
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 139
+err name: SyntaxError
+err message: Unexpected token a in JSON at position 0
+err stack: SyntaxError: Unexpected token a in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Stream.<anonymous> (/Users/User/mj/js-acfun-pc-v2/node_modules/superagent/lib/node/parsers/json.js:8:35)
+    at emitNone (events.js:86:13)
+    at Stream.emit (events.js:186:7)
+    at Unzip.<anonymous> (/Users/User/mj/js-acfun-pc-v2/node_modules/superagent/lib/node/unzip.js:53:12)
+    at emitNone (events.js:91:20)
+    at Unzip.emit (events.js:186:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+*************** error log end ***************
+
+[2017-03-15 15:22:55.563] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /channel
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 85
+err name: SyntaxError
+err message: Unexpected token a in JSON at position 0
+err stack: SyntaxError: Unexpected token a in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Stream.<anonymous> (/Users/User/mj/js-acfun-pc-v2/node_modules/superagent/lib/node/parsers/json.js:8:35)
+    at emitNone (events.js:86:13)
+    at Stream.emit (events.js:186:7)
+    at Unzip.<anonymous> (/Users/User/mj/js-acfun-pc-v2/node_modules/superagent/lib/node/unzip.js:53:12)
+    at emitNone (events.js:91:20)
+    at Unzip.emit (events.js:186:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+*************** error log end ***************
+
+[2017-03-15 15:46:13.952] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /channel
+request client ip:  ::ffff:127.0.0.1
+request query:  {}
+response time: 139
+err name: SyntaxError
+err message: Unexpected token a in JSON at position 0
+err stack: SyntaxError: Unexpected token a in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Stream.<anonymous> (/Users/User/mj/js-acfun-pc-v2/node_modules/superagent/lib/node/parsers/json.js:8:35)
+    at emitNone (events.js:86:13)
+    at Stream.emit (events.js:186:7)
+    at Unzip.<anonymous> (/Users/User/mj/js-acfun-pc-v2/node_modules/superagent/lib/node/unzip.js:53:12)
+    at emitNone (events.js:91:20)
+    at Unzip.emit (events.js:186:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+*************** error log end ***************
+
