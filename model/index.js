@@ -11,4 +11,4 @@ mongoose.connect('mongodb://localhost/test', {
 
 require('./user');
 
-exports.User         = mongoose.model('User');
+exports.User = mongoose.model('User');
