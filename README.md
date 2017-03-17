@@ -18,6 +18,7 @@ gulp build
 ```
 npm start
 ```
+访问 localhost:3007
 
 ## deploy with pm2
 
@@ -25,8 +26,3 @@ use pm2 to deploy app on production envrioment.
 
 ## version URL
 /common/config/env/
-
-
-```
-pm2 startOrGracefulReload pm2.json
-```
