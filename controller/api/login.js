@@ -1,10 +1,9 @@
-require('../../model/index').User
+const User = require('../../model/index').User
 
 export default async function (ctx, next) {
-  if ( ctx.body.name.length === 0) {
-    console.log('名字没填')
-  }
-  User.find({ name: ctx.body.name },null,null, (err,docs) => {
+  const qs = ctx.query  
+
+  User.find({ name: qs.name },(err,docs) => {
     console.log('docs:',docs)
   });
 }

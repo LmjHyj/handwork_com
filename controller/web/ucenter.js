@@ -1,6 +1,7 @@
 export default async function (ctx, next) {
-  await ctx.render('index', {
-    title : '用户中心'
+  console.log(ctx.query,ctx,querystring)
+  await ctx.render('ucenter', {
+    title : '用户中心',
   })
 }
 

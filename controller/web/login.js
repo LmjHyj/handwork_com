@@ -1,5 +1,6 @@
 export default async function (ctx, next) {
-  await ctx.render('index', {
+  
+  await ctx.render('login', {
     title : '登陆'
   })
 }

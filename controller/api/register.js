@@ -1,12 +1,10 @@
-require('../../model/index').User
+const User = require('../../model/index').User
 
 export default async function (ctx, next) {
-  if ( ctx.body.name.length === 0) {
-    console.log('名字没填')
-  }
-  User.save({ name: ctx.body.name,password:ctx.body.password },null,null, (err,product,numAffected) => {
-    console.log('register:',product,numAffected)
-    ctx.redirect('/')
-  });
+  const qs = ctx.query  
+  User.create({name:qs.name,password:qs.password},(err,rs)=>{
+    console.log(err,rs)
+    // ctx.response.redirect('/ucenter')
+  })
 }
 
