@@ -1,0 +1,14 @@
+{
+  "apps": [{
+    "name": "pc-v2",
+    "script": "bin/run-prod",
+    "cwd": "/Users/user/web/new-acfun/.",
+    "max_memory_restart": "1G",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+      
+    }
+  }]
+}
