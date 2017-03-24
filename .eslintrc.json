@@ -131,7 +131,7 @@
         //    参数： allowKeywords：true 使用保留字做属性名时，只能使用.方式取属性
         //                          false 使用保留字做属性名时, 只能使用[]方式取属性 e.g [2, {"allowKeywords": false}]
         //           allowPattern:  当属性名匹配提供的正则表达式时，允许使用[]方式取值,否则只能用.号取值 e.g [2, {"allowPattern": "^[a-z]+(_[a-z]+)+$"}]
-        "dot-notation": [2, { "allowKeywords": false }],
+        "dot-notation": [0],
         // 使用 === 替代 == allow-null允许null和undefined==
         "eqeqeq": [2, "allow-null"],
         // 要求 for-in 循环中有一个 if 语句
@@ -330,7 +330,7 @@
         //    declaration: 强制使用方法声明的方式，function f(){} e.g [2, "declaration"]
         //    expression：强制使用方法表达式的方式，var f = function() {}  e.g [2, "expression"]
         //    allowArrowFunctions: declaration风格中允许箭头函数。 e.g [2, "declaration", { "allowArrowFunctions": true }]
-        "func-style": [2,"expression"],
+        "func-style": [0],
         // 强制回调函数最大嵌套深度 5层
         "max-nested-callbacks": [1,5],
         // 禁止使用指定的标识符
