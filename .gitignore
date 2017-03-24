@@ -1,8 +1,11 @@
 node_modules/
-logs/**/*.log
+dest/
+dist/
 *.iml
 **/.DS_Store
-cache/json/**
+/views/
+cache/json/*.*
 .vscode/
-*.log
+logs/**/*.log
 .idea/
+*.bak

@@ -40,26 +40,26 @@ app.use(gzip());
 app.use(routerCache(app, routerCacheConfig));
 
 app.use(views(__dirname + '/view', {
-    extension: 'jade'
+    extension: 'ejs'
 }));
 
 // config(在view中增加config变量)
-app.use(async (ctx, next) => {
+app.use(async(ctx, next) => {
     ctx.state.config = config
     await next();
 });
 
 // logger
-app.use(async (ctx, next) => {
+app.use(async(ctx, next) => {
     const start = new Date();
     let ms;
     try {
         await next();
         ms = new Date() - start;
-        logUtil.logResponse(ctx,ms);
-    } catch(error){
+        logUtil.logResponse(ctx, ms);
+    } catch (error) {
         ms = new Date() - start;
-        logUtil.logError(ctx,error,ms);
+        logUtil.logError(ctx, error, ms);
     }
 });
 
@@ -73,7 +73,7 @@ router.use('/n/api', api_router.routes(), api_router.allowedMethods());
 
 app.use(router.routes(), router.allowedMethods());
 
-app.on('error', function(err, ctx){
+app.on('error', function(err, ctx) {
     logUtil.logError(ctx, err, 0);
 });
 

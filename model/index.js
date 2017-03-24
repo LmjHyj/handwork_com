@@ -1,12 +1,11 @@
-const mongoose  = require('mongoose');
+const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/test', {
-  server: {poolSize: 20}
-}, function (err) {
-  if (err) {
-    //logger.error('connect to %s error: ', 'mongodb://localhost/test', err.message);
-    //process.exit(1);
-  }
+mongoose.connect('mongodb://localhost/demo1', {
+    server: { poolSize: 20 }
+}, function(err) {
+    if (err) {
+        process.exit(1);
+    }
 });
 
 require('./user');
