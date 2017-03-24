@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var current_path = process.cwd()
+const current_path = process.cwd()
 
 process.env.NODE_ENV = 'development'
 
