@@ -9,8 +9,8 @@ router.get('/', index)
 
 // sign controller
 // 登录
-router.get('/signin', sign.signinPage)
-router.post('/signin', sign.signin)
+router.get('signin', sign.signinPage)
+router.post('signin', sign.signin)
 // 注册
 router.get('signup', sign.signupPage)
 router.post('signup', sign.signup)

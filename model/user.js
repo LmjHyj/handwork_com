@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema({
     password: String
 })
 
-UserSchema.pre('save', (next) => {
+UserSchema.pre('save', function (next) {
     const now = new Date()
     this.update_at = now
     next()
