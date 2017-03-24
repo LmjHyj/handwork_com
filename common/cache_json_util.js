@@ -13,6 +13,7 @@ const set = (url, json) => {
     json = JSON.stringify(json)
     fs.writeFile(path, json, (err, written, buffer) => {
         if (err) {
+            console.log(err)
             process.exit(1)
         }
     })

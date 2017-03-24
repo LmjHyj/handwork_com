@@ -7,12 +7,6 @@ application created by [Koa2](http://www.koa.com)
 npm install
 ```
 
-## build static resource
-
-```
-gulp build
-```
-
 ## start server
 
 ```

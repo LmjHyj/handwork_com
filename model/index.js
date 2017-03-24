@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 
 mongoose.connect('mongodb://localhost/demo1', { server: { poolSize: 20 } }, (err) => {
     if (err) {
+        console.log(err)
         process.exit(1)
     }
 })

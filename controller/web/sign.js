@@ -4,7 +4,7 @@ const User = require('../../model/index').User
 const signinPage = async function (ctx, next) {
     console.log('render signin')
     await ctx.render('signin', {
-        title: '登录页面'
+        title: '登录页面',
     })
 }
 // 登录请求
@@ -14,7 +14,7 @@ const signin = async (ctx, next) => {
 // 注册页面
 const signupPage = async(ctx, next) => {
     await ctx.render('signupPage', {
-        title: '注册页面'
+        title: '注册页面',
     })
 }
 // 注册请求
@@ -24,23 +24,23 @@ const signup = async(ctx, next) => {
     if (!name || !pw) {
         ctx.send({
             success: false,
-            msg: '没'
+            msg: '没',
         })
     } else {
         const newUser = new User({
             name: name,
-            password: pw
+            password: pw,
         })
         newUser.save((err) => {
             if (err) {
                 return ctx.send({
                     success: false,
-                    msg: 'fail'
+                    msg: 'fail',
                 })
             }
             ctx.send({
                 success: true,
-                msg: 'ok'
+                msg: 'ok',
             })
         })
     }

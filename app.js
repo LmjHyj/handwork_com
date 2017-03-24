@@ -30,7 +30,7 @@ app.use(logger())
 // 静态文件服务
 app.use(convert(staticCache(path.join(__dirname, 'public'), {
     maxAge: 365 * 24 * 60 * 60,
-    gzip: true
+    gzip: true,
 })))
 
 app.use(gzip())
@@ -39,7 +39,7 @@ app.use(gzip())
 app.use(routerCache(app, routerCacheConfig))
 
 app.use(views(__dirname + '/view', {
-    extension: 'ejs'
+    extension: 'ejs',
 }))
 
 // config(在view中增加config变量)
