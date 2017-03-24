@@ -1,13 +1,11 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/demo1', {
-    server: { poolSize: 20 }
-}, function(err) {
+mongoose.connect('mongodb://localhost/demo1', { server: { poolSize: 20 } }, (err) => {
     if (err) {
-        process.exit(1);
+        process.exit(1)
     }
-});
+})
 
-require('./user');
+require('./user')
 
-exports.User = mongoose.model('User');
+exports.User = mongoose.model('User')

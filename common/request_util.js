@@ -3,44 +3,60 @@ const async = require('async')
 const logUtil = require('./log_util')
 const cache = require('./cache_json_util')
 
-const get = async (ctx,apiList,option) => {
+const get = async(ctx, apiList, option) => {
     let header = {
-        'Host': 'api.acfun.video.com',
+        'Host': 'api.aixifan.com',
         'Content-Type': 'application/json;charset=UTF-8'
     }
-    
-    if(option) {}
 
-    if (Object.prototype.toString.call(apiList) != "[object Array]") {
+    if (option) {console.log(option)}
+
+    if (Object.prototype.toString.call(apiList) !== '[object Array]') {
         logUtil.logError('ajax.get argv[0] must be an Array!')
     }
-    return new Promise((resolve,reject)=>{
-        async.mapLimit (apiList,20,(url,callback)=>{
+    return new Promise((resolve, reject) => {
+        async.mapLimit(apiList, 20, (url, callback) => {
             let start = new Date()
-            return new Promise((resolve,reject)=>{
-                superagent.get(url).set(header).end((error,res)=>{
-                    if (res){
+            return new Promise((resolve, reject) => {
+                superagent.get(url).set(header).end((error, res) => {
+                    const ms = new Date() - start
+                    const errorHandler = (error) => {
                         if (error) {
-                            logUtil.logError(ctx, error, new Date() - start)
-                            reject(error)          
+                            logUtil.logError(ctx, error, 1111)
                         }
-                        let ms = new Date() - start
-                        logUtil.logRequest(res,ms)
-                        callback(null,res.body.vdata)
-                        cache.set(url,res.body)
-                    } else {
                         let result = cache.get(url)
                         if (!result) {
-                            reject('no cache file for' + url)
+                            return callback('cache file is empty for ' + url)
                         }
-                        callback(null,result)
+                        return callback(null, result.vdata)
+                    }
+                    if (res) {
+                        if (error) {
+                            return errorHandler(error)
+                        }
+                        logUtil.logRequest(res, ms)
+                        if (res.body.errorid === 0) {
+                            callback(null, res.body.vdata)
+                            cache.set(url, res.body)
+                        } else {
+                            errorHandler()
+                        }
+                    } else {
+                        errorHandler()
                     }
                 })
             })
-        }, (error,result)=>{
-            resolve(result)
-        });
-    }) 
+        }, (error, result) => {
+            if (error) {
+                logUtil.logError(ctx, error)
+            }
+            if (result) {
+                resolve(result)
+            } else {
+                reject(error)
+            }
+        })
+    })
 }
 
 exports.get = get
