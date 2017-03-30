@@ -1,13 +1,23 @@
-const web_router = require('koa-router')();
+const router = require('koa-router')()
 
-const index = require('../controller/web/index');
-const login = require('../controller/web/login');
-const ucenter = require('../controller/web/ucenter');
-const register = require('../controller/web/register');
+const index = require('../controller/web/index')
+const sign = require('../controller/web/sign')
+const ucenter = require('../controller/web/ucenter')
 
-web_router.get('/', index);
-web_router.get('login', login);
-web_router.get('register', register);
-web_router.get('ucenter', ucenter);
+// 首页
+router.get('/', index)
 
-export default web_router;
+// sign controller
+// 登录
+router.get('signin', sign.signinPage)
+router.post('signin', sign.signin)
+// 注册
+router.get('signup', sign.signupPage)
+router.post('signup', sign.signup)
+// 登出
+// router.post('/signout',sign.signout)
+
+// 用户中心
+router.get('ucenter', ucenter)
+
+export default router

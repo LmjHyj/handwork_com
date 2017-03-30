@@ -10,7 +10,7 @@
 	var clean = require('gulp-clean');
 	var watch = require('gulp-watch');
 	var pump = require('pump');
-
+	var jade = require('gulp-jade');
 
 	gulp.task('clean', function () {
 		gulp.src('./public/dist', {read: false})
@@ -115,6 +115,12 @@
 	gulp.task('flash', function () {
 		gulp.src('./public/static/flash/*.*', {base: './public/static'})
 			.pipe(gulp.dest('./public/dist/'));
+	});
+
+	gulp.task('jade', function () {
+		gulp.src('./view/**/*.jade')
+			.pipe(jade())
+			.pipe(gulp.dest('./view'))
 	});
 
 	gulp.task('build', ['stylus', 'js', 'images', 'xml', 'flash'], function () {

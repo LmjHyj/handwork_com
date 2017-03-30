@@ -1,15 +1,25 @@
-const mongoose  = require('mongoose');
+const mongoose = require('mongoose')
+const bcrypt = require('bcrypt')
 
 // Schema模型
 const UserSchema = new mongoose.Schema({
-    name : String,
-    password : String
-});
+    userid: String,
+    password: String
+})
 
-UserSchema.pre('save', function(next){
-  var now = new Date();
-  this.update_at = now;
-  next();
-});
+UserSchema.pre('save', function (next) {
+    const now = new Date()
+    this.update_at = now
+    next()
+})
 
-mongoose.model('User',UserSchema)
+UserSchema.methods.comparePassword = function (pw, cb) {
+    bcrypt.compare(pw, this.password, (err, isMatch) => {
+        if (err) {
+            return cb(err)
+        }
+        cb(null, isMatch)
+    })
+}
+
+mongoose.model('User', UserSchema)

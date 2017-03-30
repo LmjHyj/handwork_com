@@ -1,9 +1,3 @@
-const api_router = require('koa-router')();
+const api_router = require('koa-router')()
 
-const login = require('../controller/api/login');
-const register = require('../controller/api/register');
-
-api_router.get('/login', login)
-api_router.post('/register', register)
-
-export default api_router;
+export default api_router
