@@ -6,3 +6,4 @@ cache/json/**
 .vscode/
 *.log
 .idea/
+npm-debug.log
