@@ -8,4 +8,5 @@ cache/json/*.*
 .vscode/
 logs/**/*.log
 .idea/
+npm-debug.log
 *.bak
