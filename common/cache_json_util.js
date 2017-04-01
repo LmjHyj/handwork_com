@@ -11,12 +11,7 @@ const cache_path = process.cwd() + '/cache/json/'
 const set = (url, json) => {
     const path = cache_path + md5(url) + '.json'
     json = JSON.stringify(json)
-    fs.writeFile(path, json, (err, written, buffer) => {
-        if (err) {
-            console.log(err)
-            process.exit(1)
-        }
-    })
+    fs.writeFile(path, json, (err, written, buffer) => {})
 }
 // 获取缓存
 const get = (url) => {
@@ -25,7 +20,7 @@ const get = (url) => {
         const fd = fs.readFileSync(path, 'utf-8')
         return JSON.parse(fd)
     } else {
-        console.log('erro file is not exist for ' + url)
+        console.log('erro cache file is not exist for ' + url)
         return
     }
 }
