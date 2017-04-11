@@ -1,5 +1,5 @@
 {
-  "name": "webpack-react-redux-es6-boilerplate",
+  "name": "handwork",
   "version": "1.0.0",
   "description": "a webpack, react, redux, es6, and boilerplate development environment",
   "main": "server.js",
@@ -11,8 +11,7 @@
     "compress": "zip -r dist.zip dist"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chachaxw/webpack-react-redux-es6-boilerplate.git"
+    "type": "git"
   },
   "keywords": [
     "webpack",
@@ -22,10 +21,6 @@
   ],
   "author": "chacha",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chachaxw/webpack-react-redux-es6-boilerplate/issues"
-  },
-  "homepage": "https://github.com/chachaxw/webpack-react-redux-es6-boilerplate#readme",
   "devDependencies": {
     "@ersinfotech/merge": "1.0.0",
     "autoprefixer": "^6.7.6",
