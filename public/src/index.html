@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <title>Webpack-React-Redux-ES6-Boilerplate dev environment</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="<%= htmlWebpackPlugin.files.chunks.app.css[0] %>" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="<%= htmlWebpackPlugin.files.chunks.app.entry %>"></script>
+  </body>
+</html>
