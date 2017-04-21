@@ -41,7 +41,7 @@
 
 	//watch stylus
 	gulp.task('watch', function () {
-		watch('./public/static/css/**/*.styl', function () {
+		gulp.watch('./public/static/css/**/*.styl', function () {
 			gulp.src(['./public/static/css/**/*.styl']).pipe(stylus({
 				compress: true
 			})).pipe(gulp.dest('./public/static/css'));
