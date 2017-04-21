@@ -2,91 +2,10 @@
 <html lang="zh">
 <head>
     <title><%= title %></title>
-    <link rel="stylesheet" href="/dist/css/page/index.min.css">
 </head>
 
 <body>
-    <div class="z_top_container">
-        <div class="z_top b-header-blur b-header-blur-black">
-            <div class="b-header-mask-wrp"><div class="b-header-mask-bg" style="background-image: url(&quot;//i0.hdslb.com/bfs/archive/4f59bf959d51592016e07efe62969c411288826a.png&quot;);"></div><div class="b-header-mask"></div></div>
-            <div class="z_header">
-                <div class="z_top_nav">
-                    <ul>
-                        <li class="home">
-                            <a class="i-link" href="//www.bilibili.com/index.html"><span>主站</span></a>
-                        </li>
-                            <li class="hbili"><a class="i-link" href="http://h.bilibili.com/" title="画友">画友</a></li>
-                        <li class="b-gc" hasframe="true">
-                            <a class="i-link" href="//game.bilibili.com/" title="游戏中心">游戏中心</a>
-                            <div class="i_div game" data-frame="game"></div>
-                        </li>
-                            <li class="live" hasframe="true">
-                            <a class="i-link" target="_blank" href="//live.bilibili.com" title="直播">直播</a>
-                            <div class="i_div stream" data-frame="stream"></div>
-                        </li>
-                        <li class="b-zb"><a class="i-link" target="_blank" href="//bmall.bilibili.com/#!/" title="周边">周边</a></li>
-                        <li style="display:none" class="b-ml"><a class="i-link" target="_blank" href="//bml.bilibili.com/index2016/?nav" title="BML">BML</a></li>
-                        <li class="shouji">
-                            <a class="i-link" target="_blank" href="//app.bilibili.com" title="移动端">移动端</a>
-                            <div class="mobile-p-box"><div class="mobile-p-qrcode"></div></div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="uns_box">
-                    <ul class="menu">
-                        <li id="i_menu_profile_btn" guest="no" class="u-i i_user" i_menu="#i_menu_profile" style="display: list-item;">
-                            <a class="i-link" href="//space.bilibili.com/" target="_blank">
-                                <img class="i_face" src="//static.hdslb.com/images/member/noface.gif">
-                            </a>
-                            <div id="i_menu_profile" class="i_menu">
-                                <div class="i_menu_bg_t"></div>
-                                <div class="info clearfix"><div class="uname"><b>大腰果</b></div><a href="https://account.bilibili.com/site/coin" target="_blank"><div class="coin" title="硬币"><b class="b-back"></b><b class="b-icon"></b><div class="outside"><div class="pre">404</div><div class="cur" title="405">405<span class="reward-for-login">&nbsp;登录奖励</span></div></div></div></a><a class="linkToCurrency" href="https://pay.bilibili.com/bb_balance.html" target="_blank" title="B币"><b class="currency b-icon"></b><b class="outside">0</b></a><a class="phone verified" href="https://account.bilibili.com/" target="_blank" tips="已绑定" tips-pos="l" initialized="true"></a><a class="email verified" href="https://account.bilibili.com/" target="_blank" tips="已绑定" tips-pos="l" initialized="true"></a></div><div class="user-info l3" id="lv_info"><div class="user-info-hd"><span class="t">等级</span></div><div class="points-wrp" id="exp_wrp"><a href="https://account.bilibili.com/site/record?type=exp" target="_blank"><div class="points-cnt"><div class="lt"></div><div class="fill-el"></div><div class="bar"><div class="points" style="width: 95%;"></div></div><div class="points-schedule"><span class="now-points">4313</span><span class="next-points">/4500</span></div></div></a><div class="user-info-desc" style="display: none;"><span class="arrow-left"></span><div class="lv-row">作为<strong>LV3</strong>，你可以：</div><div>1、发射个性弹幕（彩色、高级、顶部、底部）<br>2、参与视频互动（评论、添加tag）<br>3、投稿成为偶像</div><a class="help-link" href="//www.bilibili.com/html/help.html#k" target="_blank">会员等级相关说明 &gt;</a></div></div></div>
-                                <div class="member-menu-wrp">
-                                    <ul class="member-menu">
-                                        <li><a href="https://account.bilibili.com/site/home" target="_blank" class="account"><i class="b-icon b-icon-p-account"></i>个人中心</a></li>
-                                        <li><a href="http://member.bilibili.com/v/#/article" target="_blank" class="member"><i class="b-icon b-icon-p-member"></i>投稿管理</a></li>
-                                        <li><a href="https://pay.bilibili.com/" target="_blank" class="wallet"><i class="b-icon b-icon-p-wallet"></i>B币钱包</a></li>
-                                        <li><a href="//live.bilibili.com/i" target="_blank" class="live"><i class="b-icon b-icon-p-live"></i>直播中心</a></li>
-                                    </ul>
-                                </div>
-                                <div class="member-bottom">
-                                    <a class="logout" href="https://account.bilibili.com/login?act=exit">退出</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="i_menu_become_vip" guest="no" i_menu="become_vip" class="u-i" style="display: list-item;">
-                            <a class="i-link" href="//big.bilibili.com/site/big.html" target="_blank" style="display: none;">成为大会员</a>
-                        </li>
-                        <li id="i_menu_community_msg_btn" guest="no" i_menu="community_msg" class="u-i" style="display: list-item;">
-                            <a class="i-link" href="//message.bilibili.com" target="_blank">消息</a>
-                        <div class="num" id="message_num_total" style="display: none;">0</div><div class="dyn_wnd" id="community_msg" style="top: 42px; left: -31px;">                            <div class="dyn_arrow"></div>                            <div class="dyn_menu">                                <div class="menu">                                    <ul>                                        <li>                                            <a href="//message.bilibili.com#reply" target="_blank">                                                <i class="icons2 icons-reply"></i>                                                <span class="inner-type">回复我的</span>                                                <span class="inner-num inner_notify_reply" id="reply_me" style="display: none;">0</span>                                            </a>                                        </li>                                        <li>                                            <a href="//message.bilibili.com#at" target="_blank">                                                <i class="icons2 icons-at"></i>                                                <span class="inner-type">&nbsp;&nbsp;@我的&nbsp;&nbsp;</span>                                                <span class="inner-num inner_notify_at" id="at_me" style="display: none;">0</span>                                            </a>                                        </li>                                        <li>                                            <a href="//message.bilibili.com#love" target="_blank">                                                <i class="icons2 icons-love"></i>                                                <span class="inner-type">收到的赞</span>                                                <span class="inner-num inner_notify_love" id="praise_me" style="display: none;">0</span>                                            </a>                                        </li>                                        <li>                                            <a href="//message.bilibili.com#system" target="_blank">                                                <i class="icons2 icons-system"></i>                                                <span class="inner-type">系统通知</span>                                                <span class="inner-num inner_notify_message" id="notify_me" style="display: none;">0</span>                                            </a>                                        </li>                                        <li>                                            <a href="//message.bilibili.com/#whisper" target="_blank">                                                <i class="icons2 icons-message"></i>                                                <span class="inner-type">我的私信</span>                                                <span class="inner-num inner_notify_message" id="chat_me" style="display: none;">0</span>                                            </a>                                        </li>                                    </ul>                                </div>                            </div></div><div style="display:none;border:1px solid #f25d8e;background:#fff;position:absolute;border-radius:4px;line-height:36px;text-align:left;padding:0 15px;top:52px;left:-8px;white-space:nowrap;">            <div style="background: url(//static.hdslb.com/images/base/icons.png) -841px -1101px no-repeat;width:38px;height:12px;position:absolute;top:-12px;"></div>            <ul id="floag_msg"></ul>        </div></li>
-                        <li id="i_menu_msg_btn" guest="no" i_menu="#dyn_wnd" class="u-i" style="display: list-item;">
-                            <div class="num" id="dynamic_num_total" data-dynamic-all="0" data-dynamic-live="0"></div>
-                            <a class="i-link" href="//www.bilibili.com/account/dynamic" target="_blank">动态</a>
-                        <div id="dyn_wnd" style="top: 42px; left: -157px;"><div class="dyn_menu"><div class="menu"><ul><li mode="video" class="on">视频<div class="num" id="video_num"></div></li><li mode="live">直播<div class="num" id="live_num"></div></li><li mode="draw">画友<div class="num" id="draw_num"></div></li></ul><div class="line"></div></div></div><div class="dyn_list_wrapper view-video" mode="video"><ul class="dyn_list" mode="video"><li class="loading">loading...</li></ul></div><div class="dyn_list_wrapper view-live" mode="live" style="display: none;"><ul class="dyn_list" mode="live"><li class="loading">loading...</li></ul></div><div class="wnd_bottom live" style="display: none;"><div class="r-l"><a class="btn-live-more" href="//live.bilibili.com/i/following" target="_blank">所有关注</a></div></div><div class="dyn_list_wrapper view-draw" mode="draw" style="display: none;"><ul class="dyn_list" mode="draw"><li class="loading">loading...</li></ul></div><div class="wnd_bottom"><div class="r-l"><a class="read-more" href="//www.bilibili.com/account/dynamic">查看全部</a><div class="num" id="dynamic_num"></div><div class="check-all no-select"></div></div></div></div></li>
-                        <li id="i_menu_fav_btn" guest="no" i_menu="#i_menu_fav" class="u-i" style="display: list-item;">
-                            <a class="i-link" href="//space.bilibili.com/#!/favlist" target="_blank">收藏夹</a>
-                        <div class="mini-wnd" style="left: -130px; top: 42px;"><ul class="list"></ul><a class="read-more" href="//space.bilibili.com/#!/favlist" target="_blank">查看更多<i class="b-icon b-icon-arrow-r"></i></a></div></li>
-                        <li id="i_menu_login_reg" guest="yes" class="u-i" style="display: none;">
-                            <a id="i_menu_login_btn" class="i-link login" href="https://account.bilibili.com/login"><span>登录</span></a><i class="s-line"></i><a id="i_menu_register_btn" class="i-link reg" href="https://www.bilibili.com/register"><span>注册</span></a>
-                        </li>
-                        <li id="i_menu_history_btn" class="u-i">
-                            <a class="i-link" href="//www.bilibili.com/account/history">历史</a>
-                        <div class="mini-wnd" style="left: -136px; top: 42px;"><div class="top-open-history" style="display: none;"><p class="txt">历史功能暂停中，就算看不可描述的视频也不会被记录下来了</p><a class="openbtn">前去开启</a></div><ul class="list history"></ul><a class="read-more">查看更多<i class="b-icon b-icon-arrow-r"></i></a></div></li>
-                        <li class="u-i b-post">
-                            <a class="i-link" href="http://member.bilibili.com/v/video/submit.html" target="_blank">投 稿</a>
-                            <ul class="s-menu">
-                                <li><a href="http://member.bilibili.com/v/video/submit.html" target="_blank"><i class="b-icon b-icon-vp"></i><em>视频投稿</em></a></li>
-                                <li><a href="http://member.bilibili.com/v/#/article" target="_blank"><i class="b-icon b-icon-vm"></i><em>投稿管理</em></a></li>
-                                <li><a href="http://member.bilibili.com/v/" target="_blank"><i class="b-icon b-icon-vc"></i><em>创作中心</em></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
 </body>
 
 </html>
